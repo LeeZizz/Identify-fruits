@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruits Recognition API Demo</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <h1>Deepstack Fruits Recognition API System Demo</h1>
+        <p>
+          This is an image classification demo showcasing how Deepstack can be
+          used to identify fruits using machine learning models built in the
+          Deepstack console. Models are trained on a dataset of seven classes
+          which are: Apple, Banana, Mango, Orange, Strawberry, Tomato, or
+          Watermelon.
+        </p>
+      </div>
+      <div class="right-section">
+        <img
+          src="/assets/images/hinh-anh-cay-cherry.jpg"
+          class="default-image"
+          alt="Default Fruit"
+        />
+        <img id="previewImage" class="fruit-image" alt="Preview" />
+        <div id="loader" class="loader-dots-container" style="display: none">
+          <!-- Modified loader element -->
+          <div class="loader-dot"></div>
+          <div class="loader-dot"></div>
+          <div class="loader-dot"></div>
+        </div>
+        <div class="upload-section">
+          <label class="upload-btn">
+            Choose file to be uploaded
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              style="display: none"
+              onchange="previewFile()"
+            />
+          </label>
+          <span class="file-name" id="fileName">No file chosen</span>
+          <button class="submit-btn" onclick="submitImage()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
